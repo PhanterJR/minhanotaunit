@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta name="application-name" content="minhanotaunit">
+    <title>minhanotaunit</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/materialize.min.css"/>
+    <script type="text/javascript"><!--
+    // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).
+    var ajax_server= "http://conexaodidata.com.br/phantermobileconstructor/";
+    var w2p_ajax_confirm_message = "Are you sure you want to delete this object?";
+    var w2p_ajax_disable_with_message = "Working...";
+    var w2p_ajax_date_format = "%d/%m/%Y";
+    var w2p_ajax_datetime_format = "%d/%m/%Y %H:%M:%S";
+    var ajax_error_500 = 'An error occured, please <a href="index.html">reload</a> the page'
+    //--></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/phanterresponsivo.js" type="text/javascript"></script>
+    <script src="js/materialize.min.js" type="text/javascript"></script>
+  <style type="text/css">
+    body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  main {
+    flex: 1 0 auto;
+  }
+    /*inicio Logo*/
+      .caixa_logo_principal{
+        height: 150px;
+        width: 282px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #logo_conex {
+        position: relative;
+      }
+      #letra01 {
+        width: 40px;
+        height: 40px;
+        margin-top: 13px;
+        margin-left: 0px;
+        background: transparent url("images/sprit_conex.png") no-repeat scroll 0px -13px;
+        padding: 0px;
+        -webkit-animation: letrac 30s ease-in infinite;
+                animation: letrac 30s ease-in infinite;
+      }
+      #letra02 {
+        width: 40px;
+        height: 40px;
+        margin-top: 27px;
+        margin-left: 40px;
+        background: transparent url("images/sprit_conex.png") no-repeat scroll -40px -27px;
+        padding: 0px;
+        -webkit-animation: letrao1 30s ease-in infinite;
+                animation: letrao1 30s ease-in infinite;
+      }
+      #letra03 {
+        width: 40px;
+        height: 40px;
+        margin-top: 14px;
+        margin-left: 80px;
+        background: transparent url("images/sprit_conex.png") no-repeat scroll -80px -14px;
+        padding: 0px;
+        -webkit-animation: letran 30s ease-in infinite;
+                animation: letran 30s ease-in infinite;
+      }
+      #letra04 {
+        width: 40px;
+        height: 40px;
+        margin-top: 0px;
+        margin-left: 120px;
+        background: transparent url("images/sprit_conex.png") no-repeat scroll -120px 0px;
+        padding: 0px;
+        -webkit-animation: letrae 30s ease-in infinite;
+                animation: letrae 30s ease-in infinite;
+      }
+      #letra05 {
+        width: 40px;
+        height: 40px;
+        margin-top: 14px;
+        margin-left: 163px;
+        background: transparent url("images/sprit_conex.png") no-repeat scroll -163px -14px;
+        padding: 0px;
+        -webkit-animation: letrax 30s ease-in infinite;
+                animation: letrax 30s ease-in infinite;
+      }
+      #letra06 {
+        width: 40px;
+        height: 46px;
+        margin-top: 16px;
+        margin-left: 201px;
+        background: transparent url("images/sprit_conex.png") no-repeat scroll -201px -16px;
+        padding: 0px;
+        -webkit-animation: letraa 30s ease-in infinite;
+                animation: letraa 30s ease-in infinite;
+      }
+      #letra07 {
+        width: 40px;
+        height: 40px;
+        margin-top: 13px;
+        margin-left: 241px;
+        background: transparent url("images/sprit_conex.png") no-repeat scroll -241px -13px;
+        padding: 0px;
+        -webkit-animation: letrao2 30s ease-in infinite;
+                animation: letrao2 30s ease-in infinite;
+      }
+      #didata {
+        top: -5px;
+        width: 154px;
+        height: 67px;
+        margin-top: 63px;
+        margin-left: 125px;
+        background: transparent url("images/sprit_conex.png") no-repeat scroll -125px -63px;
+        padding: 0px;
+        -webkit-animation: didataani 30s ease-in infinite;
+                animation: didataani 30s ease-in infinite;
+      }
+      .letras_conex {
+        position: absolute;
+      }
+      @-webkit-keyframes letrac {
+        0% {top:0; left: 0;}
+        4% {top:0; left: 0;}
+        5% {top:5px; left: 4px;}
+        20% {top:5px; left:4px;}
+        21% {top:0; left:0;}
+        100%{top:0; left: 0;}
+        }
+      @keyframes letrac {
+        0% {top:0; left: 0;}
+        4% {top:0; left: 0;}
+        5% {top:5px; left: 4px;}
+        20% {top:5px; left:4px;}
+        21% {top:0; left:0;}
+        100%{top:0; left: 0;}
+        }
+      @-webkit-keyframes letrao1 {
+        0% {top:0; left: 0;}
+        7% {top:0; left: 0;}
+        8% {top:-7px; left: 3px;}
+        20% {top:-7px; left:3px;}
+        21% {top:0; left:0;}
+        100%{top:0; left: 0;}
+        }
+      @keyframes letrao1 {
+        0% {top:0; left: 0;}
+        7% {top:0; left: 0;}
+        8% {top:-7px; left: 3px;}
+        20% {top:-7px; left:3px;}
+        21% {top:0; left:0;}
+        100%{top:0; left: 0;}
+        }
+      @-webkit-keyframes letran {
+        0% {top:0; left: 0;}
+        3% {top:0; left: 0;}
+        4% {top:5px; left: 2px;}
+        20% {top:5px; left:2px;}
+        21% {top:0; left:0;}
+        100%{top:0; left: 0;}
+        }
+      @keyframes letran {
+        0% {top:0; left: 0;}
+        3% {top:0; left: 0;}
+        4% {top:5px; left: 2px;}
+        20% {top:5px; left:2px;}
+        21% {top:0; left:0;}
+        100%{top:0; left: 0;}
+        }
+      @-webkit-keyframes letrae {
+        0% {top:0; left: 0;}
+        6% {top:0; left: 0;}
+        7% {top:20px; left: 0;}
+        20% {top:20px; left:0;}
+        21% {top:0; left:0;}
+        100%{top:0; left: 0;}
+        }
+      @keyframes letrae {
+        0% {top:0; left: 0;}
+        6% {top:0; left: 0;}
+        7% {top:20px; left: 0;}
+        20% {top:20px; left:0;}
+        21% {top:0; left:0;}
+        100%{top:0; left: 0;}
+        }
+      @-webkit-keyframes letrax {
+        0% {top:0; left: 0;}
+        2% {top:0; left: 0;}
+        3% {top:5px; left: -2px;}
+        20% {top:5px; left:-2px;}
+        21% {top:0; left:0;}
+        100%{top:0; left: 0;}
+        }
+      @keyframes letrax {
+        0% {top:0; left: 0;}
+        2% {top:0; left: 0;}
+        3% {top:5px; left: -2px;}
+        20% {top:5px; left:-2px;}
+        21% {top:0; left:0;}
+        100%{top:0; left: 0;}
+        }
+      @-webkit-keyframes letraa {
+        0% {top:0; left: 0;}
+        5% {top:0; left: 0;}
+        6% {top:-9px; left: -3;}
+        20% {top:-9px; left:-3;}
+        21% {top:0; left:0;}
+        100%{top:0; left: 0;}
+        }
+      @keyframes letraa {
+        0% {top:0; left: 0;}
+        5% {top:0; left: 0;}
+        6% {top:-9px; left: -3;}
+        20% {top:-9px; left:-3;}
+        21% {top:0; left:0;}
+        100%{top:0; left: 0;}
+        }
+      @-webkit-keyframes letrao2 {
+        0% {top:0; left: 0;}
+        8% {top:0; left: 0;}
+        9% {top:5px; left: -4px;}  
+        20% {top:5px; left:-4px;}
+        21% {top:0; left:0;}
+        100%{top:0; left: 0;}
+        }
+      @keyframes letrao2 {
+        0% {top:0; left: 0;}
+        8% {top:0; left: 0;}
+        9% {top:5px; left: -4px;}  
+        20% {top:5px; left:-4px;}
+        21% {top:0; left:0;}
+        100%{top:0; left: 0;}
+        }
+      @-webkit-keyframes didataani {
+        0% {top: -5px;}
+        7%{top:-5px;}
+        8%{top:-10px;}
+        20%{top:-10px;}
+        21%{top:-5px;}
+        100%{top:-5px;}
+        }
+      @keyframes didataani {
+        0% {top: -5px;}
+        7%{top:-5px;}
+        8%{top:-10px;}
+        20%{top:-10px;}
+        21%{top:-5px;}
+        100%{top:-5px;}
+        }
+    /*fim Logo*/
+    .copyfooter{
+      padding: 10px;
+      text-align: center;
+    }
+    nav {
+      background-color: #344581;
+    }
+    .page-footer {
+      background-color: #344581;
+    }
+    .button-collapse > i.fa {
+      font-size: 2rem;
+    }
+    .fixed-action-btn {
+      bottom: 56px;
+    }
+  </style>
+  </head>
+  <body>
+  <header>
+  <nav><div class="minhanotaunit nav_wrapper"><a class="brand-logo right minhanotaunit" href="index.html">MINHA NOTA UNIT</a><ul id="nav-mobile"><li><ul class="side-nav" id="slide-out" style="color:black"><li><h5 style="text-align:center; text-transform:uppercase; color: black">Configure os pesos</h5><h6 style="text-align:center; text-transform:uppercase; color: grey">(Composição da nota)</h6></li><li><div class="divider"></div></li><li><br /></li><li><div class="row"><div class="input-field col s12"><input class="validate eh_nota" id="peso_prova" type="tel" /><label for="peso_prova">Peso da Prova</label></div></div></li><li><div class="row"><div class="input-field col s12"><input class="validate eh_nota" id="peso_aas" type="tel" /><label for="peso_aas">Peso das AAs</label></div></div></li><li><div class="row"><div class="input-field col s12"><input class="validate eh_nota" id="peso_pas" type="tel" /><label for="peso_pas">Peso da PAS</label></div></div></li><li><div class="divider"></div></li><li><a href="sobre.html">Sobre</a></li></ul><a class="button-collapse" data-activates="slide-out" href="#"><i class="fa fa-bars"></i></a></li></ul></div></nav>
+  </header>
+  <main>
+<div><ul class="collection with-header"><li class="collection-header">Nota de Prova</li><li class="collection-item"><div class="input-field"><input autocomplete="off" class="peso_nao validate eh_nota" id="nprova" type="tel" /><label for="nprova">Nota da Prova</label></div></li><li class="collection-header">Nota das Atividades de Autoaprendizagem</li><li class="collection-item"><div class="input-field"><input autocomplete="off" class="peso_nao validate eh_nota" id="aa1" type="tel" /><label for="aa1">Nota AA1</label></div></li><li class="collection-item"><div class="input-field"><input autocomplete="off" class="peso_nao validate eh_nota" id="aa2" type="tel" /><label for="aa2">Nota AA2</label></div></li><li class="collection-item"><div class="input-field"><input autocomplete="off" class="peso_nao validate eh_nota" id="aa3" type="tel" /><label for="aa3">Nota AA3</label></div></li><li class="collection-item"><div class="input-field"><input autocomplete="off" class="peso_nao validate eh_nota" id="aa4" type="tel" /><label for="aa4">Nota AA4</label></div></li><li class="collection-header">Nota da PAS</li><li class="collection-item"><div class="input-field"><input autocomplete="off" class="peso_nao validate eh_nota" id="pas" type="tel" /><label for="pas">Nota da PAS</label></div></li></ul><div style="text-align:center; margin-bottom: 10px;"><a class="waves-effect waves-light btn" id="botao_calcular">Calcular</a></div><div class="fixed-action-btn horizontal"><a class="btn-floating btn-large orange"><i class="fa fa-plus"></i></a><ul><li><a class="btn-floating red" id="botao_limpar"><i class="fa fa-eraser"></i></a></li></ul></div><div class="modal bottom-sheet" id="modalnotaerrada"><div class="modal-content"><h4>Erro na nota</h4><p>A nota deve ser um número de 0 à 10</p></div><div class="modal-footer"><a class="modal-action modal-close waves-effect waves-green btn-flat">OK</a></div></div><div class="modal bottom-sheet" id="modalnotavazia"><div class="modal-content"><h4>Erro na nota</h4><p>Há notas necessárias que estão vazias ou apresentam algum erro, não será possível calcular a nota!</p></div><div class="modal-footer"><a class="modal-action modal-close waves-effect waves-green btn-flat">OK</a></div></div><div class="modal bottom-sheet" id="modalpesoerro"><div class="modal-content"><h4>Erro nos pesos</h4><p>Só é permitido adicionar pesos com valores de 0 à 10! Restaurando valores antigos!</p></div><div class="modal-footer"><a class="modal-action modal-close waves-effect waves-green btn-flat">OK</a></div></div></div>
+<script type="text/javascript">
+  storage = window.localStorage;
+  minhanotaunit_peso_prova=storage.getItem("peso_prova");
+  minhanotaunit_peso_aas=storage.getItem("peso_aas");
+  minhanotaunit_peso_pas=storage.getItem("peso_pas");
+  function configpesopadrao(){
+    minhanotaunit_peso_prova=storage.getItem("peso_prova");
+    minhanotaunit_peso_aas=storage.getItem("peso_aas");
+    minhanotaunit_peso_pas=storage.getItem("peso_pas");
+    if (minhanotaunit_peso_prova==null){
+      storage.setItem("peso_prova", 7);
+      minhanotaunit_peso_prova=storage.getItem("peso_prova");
+      $('#peso_prova').val(minhanotaunit_peso_prova)
+    } else{
+      $('#peso_prova').val(minhanotaunit_peso_prova)
+    }
+    if (minhanotaunit_peso_aas==null){
+      storage.setItem("peso_aas", 1);
+      minhanotaunit_peso_aas=storage.getItem("peso_aas");
+      $('#peso_aas').val(minhanotaunit_peso_aas)
+    } else{
+      $('#peso_aas').val(minhanotaunit_peso_aas)
+    }
+    if (minhanotaunit_peso_pas==null){
+      storage.setItem("peso_pas",2);
+      minhanotaunit_peso_pas=storage.getItem("peso_pas");
+      $('#peso_pas').val(minhanotaunit_peso_pas)
+    } else{
+      $('#peso_pas').val(minhanotaunit_peso_pas)
+    }
+  }
+  function validarnota(objeto){
+    var valor= $(objeto).val();
+    valor=valor.replace(",", ".")
+    try{
+      valor=parseFloat(valor)
+      if (isNaN(valor)){
+        $(objeto).val('0.0');
+      } else {
+        $(objeto).val(String(valor));
+      }
+    }catch(err){
+      valor=0
+      $(objeto).val("0.0");
+      console.log(err)
+    }
+    if ((valor>=0)&&(valor<=10)){
+      console.log(valor)
+    } else {
+      $('#modalnotaerrada').modal({
+        complete: function() {$(objeto).focus();}
+      });
+      $('#modalnotaerrada').modal('open');
+    }
+  }
+  function limpar(){
+    $('.peso_nao').each(function(){
+      $(this).val('')
+    });
+  }
+  function calcular(){
+    var achou_vazio=false;
+    $('.eh_nota').each(function(){
+      var valor=$(this).val();
+      try{
+        valor=parseFloat(valor)
+        if (isNaN(valor)){
+          achou_vazio=true;
+        } else {
+          $(this).val(String(valor));
+        }
+      }catch(err){
+        valor=0;
+        console.log(err)
+      }
+      if ((valor>=0)&&(valor<=10)){
+        // faz nada
+      } else{
+        achou_vazio=true;
+      }
+    });
+    if (achou_vazio==true){
+      $('#modalnotavazia').modal('open');
+    } else{
+      console.log("não achou vazio")
+      var p_prova=parseFloat($('#peso_prova').val())
+      var p_aa=parseFloat($('#peso_aas').val())
+      var p_pas=parseFloat($('#peso_pas').val())
+      var n_prova=parseFloat($('#nprova').val())
+      var n_aa1=parseFloat($('#aa1').val())
+      var n_aa2=parseFloat($('#aa2').val())
+      var n_aa3=parseFloat($('#aa3').val())
+      var n_aa4=parseFloat($('#aa4').val())
+      var n_pas=parseFloat($('#pas').val())
+      var nota=((n_prova*p_prova)+(((n_aa1+n_aa2+n_aa3+n_aa4)/4.)*p_aa)+(n_pas*p_pas))/10.
+      var nota=String(parseInt(parseFloat(String(nota*10.)))/10.)
+      Materialize.toast('Sua nota é '+nota, 4000)
+    }
+  }
+  function atualizarpesos(){
+    var peso_prova=$('#peso_prova').val();
+    var peso_aas=$('#peso_aas').val();
+    var peso_pas=$('#peso_pas').val();
+    if ((peso_prova>=0)&&(peso_prova<=10)&&(peso_aas>=0)&&(peso_aas<=10)&&(peso_pas>=0)&&(peso_pas<=10)){
+      minhanotaunit_peso_prova=$('#peso_prova').val();
+      minhanotaunit_peso_aas=$('#peso_aas').val();
+      minhanotaunit_peso_pas=$('#peso_pas').val();
+      storage.setItem("peso_prova", minhanotaunit_peso_prova);
+      storage.setItem("peso_aas", minhanotaunit_peso_aas);
+      storage.setItem("peso_pas", minhanotaunit_peso_pas);       
+    } else{
+      $('#modalpesoerro').modal('open');
+      configpesopadrao();
+    }
+  }
+  $(document).ready(function(){
+    configpesopadrao();
+    $(".eh_nota").on('change', function(){
+      validarnota(this);
+    })
+    $(".button-collapse").sideNav({
+      menuWidth: 300,
+      draggable: true,
+      onClose: function(){atualizarpesos();},
+    });
+    $('.modal').modal();
+    $("#botao_calcular").on('click', function(){
+      calcular();
+    });
+    $("#botao_limpar").on('click', function(){
+      limpar();
+    });
+  })
+</script>
+  </main>
+  <footer class="page-footer">
+  <div class="conteiner"><div class="caixa_logo_principal"><div id="logo_conex"><div class="letras_conex" id="letra01"></div><div class="letras_conex" id="letra02"></div><div class="letras_conex" id="letra03"></div><div class="letras_conex" id="letra04"></div><div class="letras_conex" id="letra05"></div><div class="letras_conex" id="letra06"></div><div class="letras_conex" id="letra07"></div><div class="letras_conex" id="didata"></div></div></div></div><div class="footer-copyright"><div class="conteiner copyfooter">Conexão Didata &copy; 2011-2017, Desenvolvido por PhanterJR</div></div>
+  </footer>
+  <script type="text/javascript" src="cordova.js"></script>
+  </body>
+</html>
